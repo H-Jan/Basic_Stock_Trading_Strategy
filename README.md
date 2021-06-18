@@ -1,25 +1,60 @@
-#Stock Trading Algorithm
+<h1 align="center">
+	<b> Stock Trading Algorithm </b>
+</h1>
+
+<p align="center"> <i> 
+In this Repo, we like three things: Programming, Visual Data, and Returns
+	</i>
+<p> 
+	
 
 ## Description
 
+<div> 
 I set out to test my skills and see how well I can perform against the market beased on historical data of a few key selected stocks. Armed with rudimentary knowledge of programming and trading, how well can a person do against the 7% average annual return of the S&P 500?
-
+</div> 
+	
 ## What To Know
 
-Those who wish to follow should have a basic understanding of the following principles: 
-	* Jupyter Notebook
-This is a hypothetical stock trading algorithm based on historical data of selected stocks that places trades based on the crossover's of various simple moving averages
 
-The requirements for this project was jupyter notebook, numpy, quandl (API), pandas, datetime, matplotlib, and mplfinance (using .original_flavor since mplfinance is deprecated and need to access candlestick_ohlc). The language used is Python. 
+	  
+<div> 
+	<p> Those who wish to follow should have a basic understanding of the following principles
+	<p align="center"> <b> Jupyter Notebook <br /> Pandas <br /> Simple Moving Averages <br /> Python <br /> MPL Finance <br /> QuandL API </b> </p>
 
-The first section is a simple visualization of the stock data using matplotlib package and DataFrame. From this we created a line chart of the price fluctuations acrosss a set amount of time under plot "Closing Price of Apple Stock"
+</div>
 
-Next step of order was to create a candlestick chart, a plot popular with trading that relays the opening, closing, high, low, variability, gain, and loss of a certain time period of trading.   
-  The candlestick charts of AAPL, MSFT, and FB are included across the time period of 2015-01-11 to 2017-11-11
+If you have any experience with the above tools or libraries, then you are more than prepared to explore this repository. Remember, our goal is to use rudimentary knowledge of both programming and trading to beat 7% annual returns.
 
-In comparing the 3 aforementioned stocks, we plotted their closing adjusted price to allow for direct comparison without visual variability due to their inherent numerical value. 
+## How Do We Analyze Stocks? 
 
-Next, we began looking into moving averages to better compare the best "buy/sell" opportunity using crossover events of 20 day, 50 day, and 200 day simple moving averages
-  Using these crossover events, we created a historical window through which our algorithm would recommend a buy (green) for the stock and a neutral/sell (white)
-  
-In addition to our above algorithm, we used it against a backtest of previous data for multiple stocks to determine what our ideal "portfolio" of 1 million dollars would return across the aforementioned time period, resulting in a 40% gain when bought with the specific stocks across 2015-01-11 to 2017-11-11
+The way I went about analyzing stocks was centered around one principle: *Cross-Over's of Simple Moving Average's (S.M.A's).*
+
+Given weekly data, we looked at 20, 50, and 200 moving day average's and found a linear regression ribbons representing their price behavior. Then, we analyzed the visual charts according to a few basic rules
+
+<br />
+<br />
+
+<p align="center"> 
+	<b> <i>
+	When the 20 day moving average falls below the 50 day moving average, the stock will fall <br />
+	<br /> When the 50 day moving average falls below the 200 day moving average, the stock will fall <br />
+	<br /> When the 200 or 50 day moving average cross above the 20 day moving average, the stock will rise <br />
+	<br /> When the 200 day moving average crosses above the 50 day moving average, the stock will rise <br />
+		</i> </b>
+
+</p>
+
+<br />
+<br />
+
+Based on these simple rules, I found every instance of a cross over period and whether they were periods of purchasing (green) or holding/selling (white), and compared against the average return across the same period.
+
+## How did it go?
+
+
+When backtested within a hypothetical porfolio of 1 million dollars across a few selectede stocks from the time of 2015-01-11 to 2017-11-11, we resulted in a 40% overall gain across 2.9 years, exceeding the 7% S&P 500 Return
+
+## Final Comments
+
+*Stonks Go BRRRRR*
