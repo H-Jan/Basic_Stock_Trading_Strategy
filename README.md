@@ -1,4 +1,13 @@
-# Basic_Stock_Trading_Strategy
+#Stock Trading Algorithm
+
+## Description
+
+I set out to test my skills and see how well I can perform against the market beased on historical data of a few key selected stocks. Armed with rudimentary knowledge of programming and trading, how well can a person do against the 7% average annual return of the S&P 500?
+
+## What To Know
+
+Those who wish to follow should have a basic understanding of the following principles: 
+	* Jupyter Notebook
 This is a hypothetical stock trading algorithm based on historical data of selected stocks that places trades based on the crossover's of various simple moving averages
 
 The requirements for this project was jupyter notebook, numpy, quandl (API), pandas, datetime, matplotlib, and mplfinance (using .original_flavor since mplfinance is deprecated and need to access candlestick_ohlc). The language used is Python. 
